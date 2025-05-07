@@ -88,7 +88,6 @@ class proj4(QMainWindow):
         if self.ui.checkBox.isChecked():
             self.ui.zaButton.setEnabled(False)
             self.ui.noButton.setEnabled(False)
-            self.ui.resetButton.setEnabled(False)
             self.ui.upZaButton.setEnabled(False)
             self.ui.downZaButton.setEnabled(False)
             self.ui.upNoButton.setEnabled(False)
@@ -99,7 +98,7 @@ class proj4(QMainWindow):
         else:
             self.ui.zaButton.setEnabled(True)
             self.ui.noButton.setEnabled(True)
-            self.ui.resetButton.setEnabled(True)
+
             self.ui.upZaButton.setEnabled(True)
             self.ui.downZaButton.setEnabled(True)
             self.ui.upNoButton.setEnabled(True)
@@ -122,6 +121,8 @@ class proj4(QMainWindow):
             self.ui.zaList.addItems(self.za)
             self.ui.noList.clear()
             self.ui.noList.addItems(self.no)
+            self.ui.lcd1.display(len(self.za))
+            self.ui.lcd2.display(len(self.no))
 
     def check(self):
         self.text = self.ui.labelLine.text()
