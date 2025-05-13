@@ -5,14 +5,10 @@ from Reg import Ui_Form
 import sys
 import re
 import hashlib
-import json
 from proj4 import Ui_MainWindow as Tab
 from main import Ui_MainWindow 
 
 import json
-
-
-
 
 class proj4(QMainWindow):
     def __init__(self, login, theme):
